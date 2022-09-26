@@ -1,0 +1,278 @@
+Structure of 'restaurants' collection:
+
+{
+  "address": {
+     "building": "1007",
+     "street": "HighStreet",
+     "zipcode": "TW31HA"
+  },
+  "borough": "Hounslow",
+  "cuisine": "Bakery",
+  "Orders": [
+     { "date": { "$date": 1393804800000 }, "rating": "A", "stars": 2 },
+     { "date": { "$date": 1378857600000 }, "rating": "A", "stars": 6 },
+     { "date": { "$date": 1358985600000 }, "rating": "A", "stars": 10 },
+     { "date": { "$date": 1322006400000 }, "rating": "C", "stars": 9 },
+     { "date": { "$date": 1299715200000 }, "rating": "B", "stars": 14 }
+  ],
+  "name": "Just Bake Shop",
+  "restaurant_id": "5075445"
+}
+
+1. Write a MongoDB query to display all the documents in the collection restaurants.
+
+2. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine for all the documents in the collection restaurant.
+
+3. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine, but exclude the field _id for all the documents in the collection restaurant.
+
+4. Write a MongoDB query to display the fields restaurant_id, name, borough and zip code, but exclude the field _id for all the documents in the collection restaurant.
+
+5. Write a MongoDB query to display all the restaurant which is in the borough Harrow.
+
+6. Write a MongoDB query to display the first 5 restaurant which is in the borough Croydon.
+
+7.Write a MongoDB query to display the next 5 restaurants after skipping first 5 which are in the borough Hounslow. 
+
+8. Write a MongoDB query to find the restaurants who achieved a score more than 90.
+
+9. Write a MongoDB query to find the restaurants that achieved a score, more than 80 but less than 100. 
+
+10. Write a MongoDB query to find the restaurants which locate in latitude value less than -95.754168.
+
+11. Write a MongoDB query to find the restaurants that do not prepare any cuisine of 'American' and their grade score more than 70 and latitude less than -65.754168.
+
+12. Write a MongoDB query to find the restaurants which do not prepare any cuisine of 'American' and achieved a score more than 70 and located in the longitude less than -65.754168.
+Note : Do this query without using $and operator.
+
+13. Write a MongoDB query to find the restaurants which do not prepare any cuisine of 'American ' and achieved a grade point 'A' not belongs to the borough Brooklyn. The document must be displayed according to the cuisine in descending order.
+
+14. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which contain 'Wil' as first three letters for its name.
+
+15. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which contain 'ces' as last three letters for its name.
+
+16. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which contain 'Reg' as three letters somewhere in its name.
+
+17. Write a MongoDB query to find the restaurants which belong to the borough Hounslow and prepared either American or Chinese 
+
+18. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which belong to the borough Windsor or Harrow or WestMinister. 
+
+19. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which are not belonging to the borough Harrow or Hounslow or Ealing.
+
+20. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which achieved a score which is not more than 10. 
+
+21. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which prepared dish except 'American' and 'Chinees' or restaurant's name begins with letter 'Wil'.
+
+22. Write a MongoDB query to find the restaurant Id, name, and grades for those restaurants which achieved a grade of "A" and scored 11 on an ISODate "2014-08-11T00:00:00Z" among many of survey dates.
+
+23. Write a MongoDB query to find the restaurant Id, name and grades for those restaurants where the 2nd element of grades array contains a grade of "A" and score 9 on an ISO Date "2014-08-11T00:00:00Z". 
+
+24. Write a MongoDB query to find the restaurant Id, name, address and geographical location for those restaurants where 2nd element of coord array contains a value which is more than 42 and upto 52.
+
+25. Write a MongoDB query to arrange the name of the restaurants in ascending order along with all the columns.
+
+26. Write a MongoDB query to arrange the name of the restaurants in descending along with all the columns.
+
+27. Write a MongoDB query to arranged the name of the cuisine in ascending order and for that same cuisine borough should be in descending order.on
+
+28. Write a MongoDB query to know whether all the addresses contains the street or not.
+
+29. Write a MongoDB query which will select all documents in the restaurants collection where the coord field value is Double.
+
+30. Write a MongoDB query which will select the restaurant Id, name and grades for those restaurants which returns 0 as a remainder after dividing the score by 7. 
+
+31. Write a MongoDB query to find the restaurant name, borough, longitude and attitude and cuisine for those restaurants which contains 'mon' as three letters somewhere in its name.
+
+32. Write a MongoDB query to find the restaurant name, borough, longitude and latitude and cuisine for those restaurants which contain 'Mad' as first three letters of its name.
+
+================================================================================================
+To complete practice, use two collections. The first is called 'universities' and is made up of these document:
+
+{
+  country : 'Spain',
+  city : 'Salamanca',
+  name : 'USAL',
+  location : {
+    type : 'Point',
+    coordinates : [ -5.6722512,17, 40.9607792 ]
+  },
+  students : [
+    { year : 2014, number : 24774 },
+    { year : 2015, number : 23166 },
+    { year : 2016, number : 21913 },
+    { year : 2017, number : 21715 }
+  ]
+}
+{
+  country : 'Spain',
+  city : 'Salamanca',
+  name : 'UPSA',
+  location : {
+    type : 'Point',
+    coordinates : [ -5.6691191,17, 40.9631732 ]
+  },
+  students : [
+    { year : 2014, number : 4788 },
+    { year : 2015, number : 4821 },
+    { year : 2016, number : 6550 },
+    { year : 2017, number : 6125 }
+  ]
+}
+
+The second is called 'courses' and looks like this:
+
+{
+  university : 'USAL',
+  name : 'Computer Science',
+  level : 'Excellent'
+}
+{
+  university : 'USAL',
+  name : 'Electronics',
+  level : 'Intermediate'
+}
+{
+  university : 'USAL',
+  name : 'Communication',
+  level : 'Excellent'
+}
+
+1.Write a MongoDB query to find those documents which specify that Spain is the value of the field country, and Salamanca is the value of the field city.
+
+2.Write a MongoDB query to find all documents with the fields country, city and name
+
+3.Write a MongoDB query to find the number of documents per university in our ‘universities’ collection.
+
+4. Write a MongoDB query to sort documents based on number of students in descending order.
+
+5. Write a MongoDB query to find first two results of your query.
+
+=================================================================================================
+ Create database EMP and Make Collection With name "EMPL" and Follow Queries 
+
+=>Created Database
+> use emp
+ switched to DB emp
+ 
+=>Create Collection
+> db.createCollection("empl")
+
+=>Insert Records Into EMPL Collection
+> db.empl.insert([
+ {no:1,name:"ST",salary:2000,role:"OB"},
+ {no:2,name:"MSD",salary:1500,role:"WK"},
+ {no:3,name:"YS",salary:1000,role:"ALR"},
+ {no:4,name:"RD",salary:1000,role:"MOB"},
+ {no:5,name:"RS",salary:500,role:"OB"},
+ {no:6,name:"BK",salary:500,role:"MOB"},
+ {no:7,name:"VK",salary:300,role:"BW"},
+ {no:8,name:"JB",salary:400,role:"BW"},
+ {no:9,name:"HP",salary:400,role:"ALR"},
+ {no:10,name:"VS",salary:300,role:"OB"}])
+
+=>Display Data in Proper Format 
+
+
+=>Update Salary Of Employee where Name is "ST" by +8000
+
+
+=>Update Salary Of All Employee by giving an increment of +4000 each
+
+
+=>update role of "MSD" as "C and WK"
+
+
+=>Add a New Field remark to document with name "RS" set Remark as WC
+
+
+=>Add a New Field As Number 11,name AK,Salary 10000,role coch without using insert statement. But for Doing So You should have a Record Added woth number 11.
+
+
+=>remove added New Field
+
+
+=>Update the Field "RD" by multiplying with salary by 2
+
+
+=>To Find Document From the empl collection where name begins with S
+
+
+=>To Find Document From the empl collection where name begins with R
+
+
+=>To Find Document From the empl collection where name ends with K
+
+
+=>To Find Document From the empl collection where name ends with D
+
+
+=>To Find Document From the empl collection where name has S in any position
+
+
+(Hint for above queries: Regular Expressions and Use Case sensitive allow For that write in Option: "i")
+
+=> To Find Document From the empl collection where name begins with S
+
+
+=> To Find Document From the empl collection where name begins with S
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+ Use of $in and $nin (in and notin)
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+(Note: There will not use {} braces in that $in and $nin)
+
+=> Display Documents where in empl collection Field have OB,MOB 
+
+
+=> Display Documents where in empl collection Field not have OB,MOB
+
+============================================================================
+Collections and Documents
+Collections are like tables in SQL databases. Initialising a collection is also happening lazily like this:
+
+> db.Student.insert({name: 'alex'})
+
+Now if we run again show dbs after we create a collection with a document we will see that the database appears in the list. This is because at the moment that we inserted this document, the document was created, which in turn created the collection which in turn created the database.
+
+1.Insert a new student with name: Mary
+
+2.Insert a new student with name: Madeline and id=2 (integer)
+
+3.Insert a new student with name: Steve, midterm score of 80 and final score of 100
+Scores should be embedded in a sub-document like this:
+
+scores:
+{
+  midterm: 0,
+  final: 0
+}
+
+4.Finding a document by a student name
+
+5.Querying embedded attributes:
+Finding all documents by a student midterm scores greater than 75.
+
+6.AND / OR queries:
+a)Finding all documents by a student midterm scores greater than 75 AND final scores greater than 80.
+b)Finding all documents by a student midterm scores greater than 75 OR final scores greater than 80.
+
+7. Find all students that have scored between [50,80) in midterm AND [80,100] in final exam
+
+Updating Documents
+===================
+Updating documents has 2 parts. The first one is finding the document(s) we want to update and the second one is modifying their values.
+
+8. REPLACE the first instance of document matching {name:'Rama'} with the new {name:'Ram Raj'} !!!!
+
+9.Update the student Raju  midterm score to 50 and final score to 100 respectively.
+
+10.Update the grades of all students to be 90
+
+Deleting documents
+==================
+11. Deleting a whole collection
+
+12. Deleting a single document whose name is 'Raju'
+
+13. Delete all students with midterm score less than 80
+
+14. 
